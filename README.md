@@ -47,8 +47,6 @@ A public GIT repository has to be used so its usage can be evaluated (https://gi
 
 The input JSON may have some errors (missing fields, wrong order, invalid value...)
 
-The service will have an HTTP endpoint that receives a date parameter (YYYYMMDD). This method will be requested to select the JSON file to process. The URL to get the file will be https://raw.githubusercontent.com/vas-test/test1/master/logs/MCP_YYYYMMDD.json
-
 The service will have an HTTP endpoint (/metrics) that returns a set of counters related with the processed JSON file:
 
 Number of rows with missing fields
