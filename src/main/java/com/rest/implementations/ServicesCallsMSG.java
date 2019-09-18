@@ -1,9 +1,11 @@
 package com.rest.implementations;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import org.apache.commons.lang3.math.NumberUtils;
+import org.hibernate.validator.internal.util.privilegedactions.GetResource;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -51,16 +54,12 @@ public class ServicesCallsMSG {
 	public List<PhoneData> openFile(String dateS) throws Exception {
 		List<JSONObject> jsonObject = new ArrayList<>();
 		JSONObject obj;
-		// The name of the file to open. I couldn`t read from file on GitHub(need a help
-		// with that) so I put those files on my pc.
-		String fileName = "C:/" + dateS + ".txt";
-		//I`m getting this error ,,Unable to open file`` when I try to open file this way.
-		//Network network = new Network();
-		//String fileName=network.request("https://raw.githubusercontent.com/vas-test/test1/master/logs/MCP_20180131.json");
+		String fileName = "C:/" + dateS + ".txt";		
 		String line = null;
 		try {
 			// FileReader reads text files in the default encoding.
 			FileReader fileReader = new FileReader(fileName);
+			//BufferedReader bufferedReader = new BufferedReader(fileReader);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 
 			while ((line = bufferedReader.readLine()) != null) {

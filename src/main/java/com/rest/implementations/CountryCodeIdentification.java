@@ -27,9 +27,8 @@ public class CountryCodeIdentification {
 	private int callDurFor61 = 0;
 	private int counter61 = 0;
 
-	/* Idea was that from this site https://countrycode.org/ , I get all country codes and check them with required parameters. 
-	    I`ve done it only for 7 of them because I wasn`t sure if it is the best solution.
-	 */
+	// Idea was that from this site https://countrycode.org/ , I get all country codes and check them with required parameters. 
+
 	public String findCountryCode(List<Call> listCall) {
 		Map<String, Integer> map = new LinkedHashMap();
 		String helpful = "Number of calls origin/destination grouped by country code is: " + "\n";

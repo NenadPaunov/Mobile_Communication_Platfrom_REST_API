@@ -27,15 +27,12 @@ public class MCPController {
 
 	@GetMapping("read/{date}")
 	public List<PhoneData> getCalls(@PathVariable("date") String dateS) {
-		// I`m not sure about this part: ,,Duration of each JSON process`` but I`ve done
-		// it this way
 		StopWatch watch = new StopWatch();
 		watch.start();
 
 		try {
 			listCallsMSG.addAll(services.openFile(dateS));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		totalNumberOfFiles++;
