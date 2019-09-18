@@ -65,3 +65,7 @@ Total number of messages
 Total number of different origin country codes (https://en.wikipedia.org/wiki/MSISDN)
 Total number of different destination country codes (https://en.wikipedia.org/wiki/MSISDN)
 Duration of each JSON process
+
+==================================
+There are 3 files which can be used for this app. Their names are: JSONFile1, JSONFile2 and JSONFile3.
+They should be putted at C:/ in order to work.
